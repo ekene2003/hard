@@ -1,0 +1,696 @@
+*{
+     padding: 0;
+     margin: 0;
+     box-sizing: border-box;
+     outline: 0;
+
+}  
+@media screen and (min-width:768px)  {
+     .home-body{
+     background-image: url(../images/math3.jpg);
+     background-size: cover;
+     background-position: center;
+}
+
+.hompage-header{
+     display: flex;
+     padding: 1rem;
+}
+.nav-logo{
+display: flex;
+align-items: center;
+gap:.6rem;
+color: white;
+font-family: 'Genos', sans-serif;
+font-size: 1.3rem;
+}
+.brand-img{
+height: 4rem;
+width: 4rem;
+border-radius: 50%;
+}
+.quiz-body{
+display: flex;
+flex-direction: column;
+align-items: center;
+justify-content: center;
+margin-top:3rem;
+}
+.welcome{
+font-size: 5rem;
+font-family: 'Roboto Flex', sans-serif;
+/* font-family: 'Genos', sans-serif; */
+
+color:white;
+}
+.intro-p{
+font-size: 1.6rem;
+color: white;
+font-weight: 500;
+font-family: 'Genos', sans-serif;
+/* font-family: 'Roboto Flex', sans-serif; */
+margin: .5rem 0;
+}
+.dificulty{
+font-family: 'Genos', sans-serif;
+/* font-family: 'Roboto Flex', sans-serif; */
+font-size: 2rem;
+color:white;
+
+}
+.difficulty-btn{
+margin-top: 2rem;
+margin-left: 1.5rem;
+padding: 1rem;
+border-radius: 4rem;
+cursor: pointer;
+font-family: 'Press Start 2P', cursive;
+color: lightblue;
+background: #000;
+border:2px solid lightblue;
+}
+.difficulty-btn:hover{
+     transform: scale(1.2);
+     color: white;
+}
+.quiz-header{
+     padding: 1rem;
+     background-color:transparent;
+}
+.main-body{
+     /* background: tan; */
+background-image: url("../images/math3.jpg");
+     overflow: hidden;
+}
+.easy-body{
+display: flex;
+height: 20rem;
+width: 50vw;
+position: absolute;
+overflow: hidden;
+top: 21%;
+z-index: 2;
+transform: translateX(50%);
+
+}
+.timer{
+
+}
+.question-slide{
+position: relative;
+display: flex;
+}
+.questions{
+background: white;
+width: 50vw;
+height: 20rem;
+padding: 1rem 1rem;
+display: flex;
+flex-direction: column;
+position: relative; 
+z-index: 33;
+/* display: none; */
+
+}
+.top-part{
+display: flex;
+justify-content: space-between;
+align-items: center;
+margin-bottom:1rem;
+
+}
+.question-head{
+     font-size: 1.7rem;
+font-family: 'Genos', sans-serif;
+
+}
+.page{
+font-size: 1.2rem;
+font-family: 'Genos', sans-serif;
+
+}
+.option-wrap{
+list-style-type: lower-alpha !important;
+
+font-family: 'Genos', sans-serif;
+font-size: 1.6rem;
+
+}
+.options{
+     margin-bottom: 1rem;
+     font-size: 1.2rem;
+     cursor: pointer;
+     background: none;
+     border:none;
+font-size: 1.6rem;
+
+}
+.options:hover{
+     font-size: 1.5rem;
+}
+.buttons{
+     display: flex;
+     justify-content: space-evenly;
+     gap: 2rem;
+    position: absolute;
+    bottom: 30%;
+    left: 30%;
+}
+.Previous{
+     margin-top: 4rem;
+     padding: .5rem;
+     cursor: pointer;
+     border-radius: 2rem;
+     z-index: 999;
+font-family: 'Press Start 2P', cursive;
+ background: #000;
+ color: lightblue;
+  border: 1px solid lightblue;
+ font-size: .8rem;
+ display: none;
+}
+.next{
+     margin-top: 4rem;
+     padding: .5rem;
+     cursor: pointer;
+     border-radius: 2rem;
+     z-index: 999;
+font-family: 'Press Start 2P', cursive;
+ background: #000;
+ color: lightblue;
+ border: 1px solid lightblue;
+ font-size: .8rem;
+ display: none;
+
+}
+.submit{
+     margin-top: 4rem;
+     margin-left: 3rem;
+     padding: .5rem;
+     cursor: pointer;
+     border-radius: 2rem;
+     z-index: 999;
+font-family: 'Press Start 2P', cursive;
+background: #000;
+  color: lightblue;
+ border: 1px solid lightblue;
+ display: none;
+}
+.next:hover{
+     transform: scale(1.3);
+     color: white;
+}
+.Previous:hover{
+     transform: scale(1.3);
+     color: white;
+}
+.submit:hover{
+     transform: scale(1.3);
+     color: white;
+}
+.timer{
+     padding: .5rem;
+     background: black;
+     color: white;
+     width: 7rem;
+     height: 2.5rem;
+     border-radius: 10%;
+     border: 2px solid lightblue;
+     font-size: 1.3rem;
+     position: absolute;
+     right: 1%;
+     top: 2%;
+     display: none;
+font-family: 'Genos', sans-serif;
+
+}
+.start-part{
+     z-index: 9999;
+     position: absolute;
+     width: 100%;
+     height:100%;
+     background-image: url("../images/math2.jpg");
+      background-size: cover;
+      background-position: center;
+}
+.start-btn{
+display: flex;
+justify-content: center;
+align-items: center;
+gap: 2rem;
+}
+.start-part-head{
+text-align: center;
+margin-top: 5rem;
+margin-bottom: 1rem;
+font-size: 5rem;
+font-family: 'Genos', sans-serif;
+color: white;
+}
+.rules-head{
+     text-align: center;
+     margin-bottom: .6rem ;
+color: white;
+
+}
+.rules{
+     text-align: center;
+     margin-bottom: .3rem;
+color: white;
+
+}
+.yes{
+padding: 1rem;
+margin-top: 1rem;
+border-radius: 2rem;
+font-size: 1.3rem;
+cursor: pointer;
+font-family: 'Press Start 2P', cursive;
+color: rgb(130, 146, 151);
+background: #000;
+border: 1px solid lightblue;
+
+}
+.no{
+padding: 1rem;
+margin-top: 1rem;
+border-radius: 2rem;
+font-size: 1.3rem;
+cursor: pointer;
+font-family: 'Press Start 2P', cursive;
+color: rgb(130, 146, 151);
+background: #000;
+border: 1px solid lightblue;
+}
+.yes:hover{
+     color: lightblue;
+}
+.no:hover{
+     color: lightblue;
+}
+.alert{
+     padding: .2rem;
+     background-color: black;
+     color: white;
+     border: 2px solid lightblue;
+     position: absolute;
+     /* bottom: 1%; */
+     top: 12%;
+     width: 100%;
+     height: 3rem;
+     margin-top: 2rem;
+     text-align: center;
+     display: none;
+font-family: 'Genos', sans-serif;
+}
+.answer{
+     display: none;
+}
+.result{
+width: 100%;
+/* height: 100vw; */
+}
+.result-body svg{
+     width: 3rem;
+     height: 3rem;
+     display: block;
+     margin: 0 auto;
+     color:lightblue;
+}
+.result-body{
+padding: 2rem;
+background: black;
+z-index: 999;
+width: 100%;
+position: absolute;
+top: 26%;
+border-radius: 2rem;
+border: 2px solid lightblue;
+}
+.result-head{
+font-size: 2rem;
+text-align: center;
+color: white;
+font-family: 'Genos', sans-serif;
+
+}
+.result-paragraph{
+color: grey;
+font-size: 1.2rem;
+text-align: center;
+
+}
+.play-again{
+     padding: .5rem;
+     font-size: 1.2rem;
+     margin:2rem .5rem;
+     cursor: pointer;
+     border-radius: 2rem;
+font-family: 'Press Start 2P', cursive;
+       font-size: .8rem;
+       background: #202020;
+     color:lightblue;
+       border: 1px solid lightblue;
+}
+.play-again:hover{
+     transform: scale(1.1);
+     color: white;
+}
+.result-btn{
+     display: flex;
+     justify-content: center;
+     align-items: center;
+}
+}
+@media screen and (max-width:768px) {
+     .home-body{
+     background-image: url(../images/math3.jpg);
+     background-size: cover;
+     background-position: center;
+}
+
+.hompage-header{
+     display: flex;
+     padding: 1rem;
+}
+.nav-logo{
+display: flex;
+align-items: center;
+gap:1rem;
+color: white;
+font-family: 'Genos', sans-serif;
+font-size: 1.3rem;
+}
+.brand-img{
+height: 4rem;  
+width: 4rem;
+border-radius: 50%;
+}
+.quiz-body{
+display: flex;
+flex-direction: column;
+align-items: center;
+justify-content: center;
+margin-top: 4rem;
+}
+.welcome{
+font-size: 5rem;
+font-family: 'Roboto Flex', sans-serif;
+/* font-family: 'Genos', sans-serif; */
+color:white;
+}
+.intro-p{
+font-size: 1.6rem;
+color: white;
+font-weight: 500;
+font-family: 'Genos', sans-serif;
+margin: .5rem 0;
+}
+.dificulty{
+font-family: 'Genos', sans-serif;
+font-size: 2rem;
+color:white;
+
+}
+.difficulty-btn{
+margin-top: 2rem;
+margin-left: 1.1rem;
+padding: 1rem;
+border-radius: 4rem;
+font-family: 'Press Start 2P', cursive;
+color: lightblue;
+background: #000;
+border:2px solid lightblue;
+}
+.quiz-header{
+     padding: 1rem;
+     background-color:transparent;
+}
+.main-body{
+background-image: url("../images/math3.jpg");
+     /* overflow: hidden; */
+}
+.easy-body{
+display: flex;
+height: 19rem;
+width: 90vw;
+overflow: hidden;
+margin-top: 5rem;
+margin-left: 1rem;
+margin-right: 1rem;
+z-index: 2;
+}
+.timer{
+
+}
+.question-slide{
+position: relative;
+display: flex;
+
+}
+.questions{
+background: white;
+width: 90vw;
+height: 19rem;
+padding: 1.2rem 1.5rem;
+display: flex;
+flex-direction: column;
+z-index: 33;
+}
+.top-part{
+display: flex;
+justify-content: space-between;
+align-items: center;
+margin-bottom:1.3rem; 
+}
+.question-head{
+     font-size: 1.6rem;
+font-family: 'Genos', sans-serif;
+
+}
+.page{
+font-size: 1.3rem;
+font-family: 'Genos', sans-serif;
+}
+.option-wrap{
+list-style-type: lower-alpha !important;
+font-family: 'Genos', sans-serif;
+font-size: 1.6rem;
+
+}
+.options{
+     margin-bottom: 1rem;
+     font-size: 1.4rem;
+}
+
+.buttons{
+     display: flex;
+     justify-content: center;
+     gap: 4rem;
+
+}
+
+.Previous{
+     margin-top: 2rem;
+     padding: .5rem;
+     border-radius: 2rem;
+     z-index: 999;
+     position: absolute;
+     left: 1.4rem;
+font-family: 'Press Start 2P', cursive;
+ background: #000;
+ color: lightblue;
+  border: 1px solid lightblue;
+ font-size: .8rem;
+ display: none;
+}
+.next{
+     margin-top: 2rem;
+     padding: .5rem;
+     border-radius: 2rem;
+     z-index: 999;
+     position: absolute;
+     left: 40%;
+font-family: 'Press Start 2P', cursive;
+ background: #000;
+ color: lightblue;
+ border: 1px solid lightblue;
+ font-size: .8rem;
+ display: none;
+}
+.submit{
+     margin-top: 2rem;
+     padding: .5rem;
+     border-radius: 2rem;
+     z-index: 999;
+     position: absolute;
+     right: 3%;
+font-family: 'Press Start 2P', cursive;
+background: #000;
+  color: lightblue;
+ border: 1px solid lightblue;
+ display: none;
+ font-size: .8rem;
+}
+.timer{
+     padding: .3rem .4rem;
+     background: black;
+     color: white;
+     width: 8rem;
+     height: 2.5rem;
+     border-radius: 10%;
+     border: 2px solid lightblue;
+     font-size: 1.3rem;
+     position: absolute;
+     right: 4%;
+     top: 2%;
+     display: none;
+font-family: 'Genos', sans-serif;
+}
+.start-part{
+     z-index: 9999;
+     position: absolute;
+     right: 0;
+     left: 0;
+     background-image: url("../images/math3.jpg");
+      background-size: cover;
+      background-position: center;
+      height: 100%;
+      /* width: 109%; */
+      /* display: none; */
+}
+.start-btn{
+display: flex;
+justify-content: center;
+align-items: center;
+gap: 2.5rem;
+}
+.start-part-head{
+text-align: center;
+margin-top: 5rem;
+margin-bottom: 1rem;
+font-size: 3.5rem;
+font-family: 'Genos', sans-serif;
+color: white;
+}
+.rules-head{
+     text-align: center;
+     margin-bottom: 1rem ;
+color: white;
+}
+.rules{
+     text-align: center;
+     margin-bottom: 1rem;
+color: white;
+/* margin: 0 2rem; */
+
+
+
+}
+.yes{
+padding: 1.2rem;
+margin-top: 2rem;
+border-radius: 2rem;
+font-size: 1.3rem;
+cursor: pointer;
+font-family: 'Press Start 2P', cursive;
+color: lightblue;
+background: #000;
+border: 1px solid lightblue;
+}
+.no{
+padding: 1.2rem;
+margin-top: 2rem;
+border-radius: 2rem;
+font-size: 1.3rem;
+cursor: pointer;
+font-family: 'Press Start 2P', cursive;
+color: lightblue;
+background: #000;
+border: 1px solid lightblue;
+}
+.alert{
+     padding: .2rem;
+     background-color: black;
+     color: white;
+     border: 2px solid lightblue;
+     position: absolute;
+     /* bottom: 1%; */
+     top: 12%;
+     width: 100%;
+     height: 2.5rem;
+     margin-top: 2rem;
+     text-align: center;
+     display: none;
+font-family: 'Genos', sans-serif;
+
+}
+.answer{
+     display: none;
+}
+
+.result-body svg{
+     width: 3rem;
+     height: 3rem;
+     display: block;
+     margin: 0 auto;
+     color:lightblue;
+}
+.result-body{
+padding: 2rem;
+background: black;
+z-index: 999;
+width: 100%;
+height: 17rem;
+position: absolute;
+bottom: 30%;
+top: 25%;
+border-radius: 2rem;
+border: 2px solid lightblue;
+}
+.result-head{
+font-size: 2rem;
+text-align: center;
+color: white;
+font-family: 'Genos', sans-serif;
+
+}
+.result-paragraph{
+color: grey;
+font-size: 1.2rem;
+text-align: center;
+
+}
+.play-again{
+     padding: .5rem;
+     font-size: 1.2rem;
+     margin:2rem .5rem;
+     cursor: pointer;
+     border-radius: 2rem;
+font-family: 'Press Start 2P', cursive;
+       font-size: .8rem;
+       background: #202020;
+     color:lightblue;
+       border: 1px solid lightblue;
+}
+.play-again:hover{
+     transform: scale(1.1);
+     color: white;
+}
+.result-btn{
+     display: flex;
+     justify-content: center;
+     align-items: center;
+}
+}
+@media screen and (min-width:1024px) {
+     .buttons{
+     display: flex;
+     justify-content: space-evenly;
+     gap: 2rem;
+    position: absolute;
+    bottom: 6%;
+    left: 30%;
+}
+}
+

@@ -1,0 +1,282 @@
+<!DOCTYPE html>
+<html lang="en">
+
+     <head>
+          <meta charset="UTF-8">
+          <meta http-equiv="X-UA-Compatible" content="IE=edge">
+          <meta name="viewport" content="width=device-width, initial-scale=1.0">
+          <title>easy page</title>
+          <link rel="stylesheet" href="./assets/css/math.css">
+          <link rel="stylesheet" href="./assets/css/all.min.css">
+          <link rel="preconnect" href="https://fonts.googleapis.com">
+          <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+          <link href="https://fonts.googleapis.com/css2?family=Amatic+SC&family=Bangers&family=Cinzel:wght@400;600&family=Edu+TAS+Beginner&family=Edu+VIC+WA+NT+Beginner&family=Exo:wght@300&family=Lobster&family=Monoton&family=Press+Start+2P&family=Roboto+Flex:opsz,wght@8..144,200&family=Roboto+Slab:wght@100;300&family=Silkscreen&display=swap"
+               rel="stylesheet">
+          <link rel="preconnect" href="https://fonts.googleapis.com">
+          <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+          <link href="https://fonts.googleapis.com/css2?family=Amatic+SC&family=Bangers&family=Cinzel:wght@400;600&family=Edu+TAS+Beginner&family=Edu+VIC+WA+NT+Beginner&family=Exo:wght@300&family=Genos:ital,wght@0,400;1,100&family=IBM+Plex+Serif:wght@300&family=Lobster&family=Monoton&family=Nanum+Gothic&family=Press+Start+2P&family=Roboto+Flex:opsz,wght@8..144,200&family=Roboto+Slab:wght@100;300&family=Silkscreen&display=swap"
+               rel="stylesheet">
+          <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css">
+     </head>
+
+     <body class="main-body">
+          <header class="quiz-header">
+               <div class="nav-logo">
+                    <img class="brand-img" src="./assets/images/IMG_9630.JPEG" alt="">
+                    <h2>EKENESZN</h2>
+               </div>
+          </header>
+          <div class="start-part">
+               <h1 class="start-part-head">Are you ready?</h1>
+               <h3 class="rules-head">Rules of the game</h3>
+               <p class="rules">1. you have only 0 seconds to answer all questions.</p>
+               <p class="rules">2. you can only select one answer from the options.</p>
+               <p class="rules">3. once your timer elapses it submits automatically.</p>
+               <p class="rules">4. ^ means raised to power</p>
+               <div class="start-btn">
+                    <button class="yes">Yes</button>
+                    <a href="./index.html"><button class="no">No</button></a>
+               </div>
+          </div>
+          <div>
+               <div class="timer"></div>
+               <div class="easy-body center">
+                    <div class="question-slide">
+                    </div>
+               </div>
+               <div class="buttons">
+                    <button class="Previous">Previous</button>
+                    <button class="next">Next</button>
+                    <button class="submit">Submit</button>
+               </div>
+               <div class="alert">
+                    <h2>Time's Up !!!!</h2>
+               </div>
+               <div class="result">
+               </div>
+          </div>
+          <script src="./assets/js/all.min.js"></script>
+          <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+          <script>
+               let mathquiz = [
+                    {
+                         question: 'What is 3 ^ 3 ?',
+                         answer: 3 ** 3,
+                         page: 1,
+                         firstopt: 29,
+                         secondopt: 9,
+                         thirdopt: 27
+                    },
+                    {
+                         question: 'What is 5 x 5 ^ 2 ?',
+                         answer: (5 * 5) ** 2,
+                         page: 2,
+                         firstopt: 500,
+                         secondopt: 625,
+                         thirdopt: 550
+                    },
+                    {
+                         question: 'What is 100 x 100?',
+                         answer: 100 * 100,
+                         page: 3,
+                         firstopt: 100,
+                         secondopt: 1000,
+                         thirdopt: 10000
+                    },
+                    {
+                         question: 'What is (21 - 21) ^ 0 ?',
+                         answer: (21 - 21) ** 0,
+                         page: 4,
+                         firstopt: 0,
+                         secondopt: 21,
+                         thirdopt: 1
+                    },
+                    {
+                         question: 'What is 4 + (2 - 1) ?',
+                         answer: 4 + (2 - 1),
+                         page: 5,
+                         firstopt: 5,
+                         secondopt: 3,
+                         thirdopt: 8
+                    },
+                    {
+                         question: 'What is 33 x 33 ?',
+                         answer: 33 * 33,
+                         page: 6,
+                         firstopt: 1089,
+                         secondopt: 1200,
+                         thirdopt: 999
+                    },
+                    {
+                         question: 'What is 22 - (-22) ?',
+                         answer: 22 - (-22),
+                         page: 7,
+                         firstopt: 0,
+                         secondopt: 44,
+                         thirdopt: 22
+                    },
+                    {
+                         question: 'What is 12 +(-2)?',
+                         answer: 12 + (-2),
+                         page: 8,
+                         firstopt: 10,
+                         secondopt: 2,
+                         thirdopt: 14
+                    },
+                    {
+                         question: 'What is 12 + (0 ^ 0) ?',
+                         answer: 12 + (0 ** 0),
+                         page: 9,
+                         firstopt: 13,
+                         secondopt: 0,
+                         thirdopt: 12
+                    },
+                    {
+                         question: 'What is 22 + 11 ?',
+                         answer: 22 + 11,
+                         page: 10,
+                         firstopt: 33,
+                         secondopt: 23,
+                         thirdopt: 17
+                    },
+               ];
+               function singleelem(elem) {
+                    return document.querySelector(elem);
+               };
+               function multielem(elem) {
+                    return document.querySelectorAll(elem);
+               };
+               let submitBtn = singleelem(".submit");
+               let easySection = singleelem(".easy-body");
+               let slider = singleelem(".question-slide");
+               let pagenumber = singleelem("page-no");
+               let timer = singleelem(".timer");
+               let yesBtn = singleelem(".yes");
+               let nextBtn = singleelem(".next");
+               let previousBtn = singleelem(".Previous");
+               let question = singleelem(".questions");
+               let result = singleelem(".result");
+               i = 0;
+               let score = 0;
+
+               mathquiz.forEach(element => {
+                    let { question, answer, page, firstopt, secondopt, thirdopt } = element;
+                    slider.innerHTML += `
+                    <div class="questions">
+                         <div class="top-part">
+                              <h3 class="question-head"> ${question}</h3>
+                              <div class="page">${page} of 10</div>
+                              <div class = "answer">${answer}</div>
+                         </div>
+                         <ol class="option-wrap">
+                              <li><div class="options">${firstopt}</div></li>
+                              <li><div class="options">${secondopt}</div></li>
+                              <li><div class="options">${thirdopt}</div></li>
+                         </ol> 
+                </div>`;
+                    let options = multielem(".options");
+                    options.forEach((option) => {
+                         option.onclick = () => {
+                              const clickedOption = option.innerText;
+                              const answerElement = option
+                                   .closest(".questions")
+                                   .querySelector(".answer");
+                              const correctAnswer = answerElement.innerText;
+                              if (clickedOption === correctAnswer) {
+                                   option.style.color = "green"
+                                   score += 10;
+
+                              }
+                              else {
+                                   score += 0;
+                                   option.style.color = "red";
+
+                              }
+                         };
+                    });
+                    submitBtn.onclick = () => {
+                         clearInterval(timemng);
+                         let comment = "";
+                         if (score > 60) {
+                              comment = "You did great ";
+
+                         }
+                         if (score < 60) {
+                              comment = "You can do better ";
+
+                         }
+                         result.innerHTML = `
+               <div class="result-body">
+                    <i class="fa fa-crown"></i>
+                    <h2 class="result-head">${comment
+                              }</h2>
+                    <p class="result-paragraph">your score is ${score}/100</p>
+                    <div class="result-btn">
+                         <a href="./easy.html"><button class="play-again">Play Again</button></a>
+                         <a href="./index.html"><button class="play-again">Home</button></a>
+                    </div>
+               </div>
+             `
+                    }
+
+               });
+               nextBtn.onclick = () => {
+                    i += 1;
+                    slider.style.right = `${i + "00%"}`;
+                    if (slider.style.right == "1000%") {
+                         slider.style.right = "0%";
+                         i = 0;
+                    }
+               };
+               previousBtn.onclick = () => {
+                    i--;
+                    slider.style.right = `${i + "00%"}`;
+                    if (slider.style.right == '-100%') {
+                         slider.style.right = "900%";
+                         i = 9;
+                    }
+               }
+               let time = 0;
+               let easySide = singleelem(".easy-body");
+               let startSection = singleelem(".start-part");
+               let alert = singleelem(".alert");
+               let timemng;
+               // let timemng;
+               yesBtn.onclick = () => {
+                    previousBtn.style.display = "block";
+                    nextBtn.style.display = "block";
+                    submitBtn.style.display = "block";
+                    timer.style.display = "block";
+                    startSection.style.display = "none";
+                    timemng =
+                         setInterval(() => {
+                              timer.innerHTML = `<p>Timer:${time++}:00</p>`;
+                              if (time > 60) {
+                                   let comment = "";
+                                   if (score > 60) {
+                                        comment = "You did great ";
+                                   }
+                                   if (score < 60) {
+                                        comment = "You can do better ";
+                                   }
+                                   alert.style.display = "block";
+                                   result.innerHTML = `
+                                             <div class="result-body">
+                                                  <i class="fa fa-crown"></i>
+                                                  <h2 class="result-head">${comment}</h2>
+                                                  <p class="result-paragraph">your score is ${score}/100</p>
+                                                  <div class="result-btn">
+                                                       <a href="./easy.html"><button class="play-again">Play Again</button></a>
+                                                       <a href="./index.html"><button class="play-again">Home</button></a>
+                                                  </div>
+                                             </div> `;
+
+                                   clearInterval(timemng);
+                              }
+                         }, 1000);
+               };
+
+          </script>
+     </body>
+
+</html>
